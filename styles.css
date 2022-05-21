@@ -4,10 +4,10 @@
 .jumbotron{
     background-image: url('assets/img/Amiibo_main.jpg');
     background-size: cover;
-    height: 300px;
+    height: 500px;
 }
 .jumbotron .lead{
-    padding-top: 85px;
+    padding-top: 75px;
     text-align: center;
 }
 .card{
@@ -19,4 +19,7 @@
 #amiibo-img{
 width: 200px;
 height: 250px;
+}
+.estadistica{
+    text-align: center;
 }
