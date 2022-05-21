@@ -1,5 +1,3 @@
-
-
 const setGraph = async() => {
     const url = 'https://www.amiiboapi.com/api/amiibo/?';
     const response = await fetch(url);

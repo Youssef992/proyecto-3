@@ -1,3 +1,4 @@
+
 const getAmiibo = async () => {
     const url = 'https://www.amiiboapi.com/api/amiibo/?';
     const response = await fetch(url);
@@ -6,7 +7,7 @@ const getAmiibo = async () => {
     console.log(data);
     var amiiboContainer = document.getElementById('container');
     amiiboContainer.innerHTML = "";
-    var cadena="";
+    var cadena = "";
     var i = 0;
     data.amiibo.forEach((amiibo, index) => {
         if (i <= 50) {
@@ -24,20 +25,21 @@ const getAmiibo = async () => {
             i++;
         }
     });
-    amiiboContainer.innerHTML = `<div class="row">`+cadena+`</div>`;
+    amiiboContainer.innerHTML = `<div class="row">` + cadena + `</div>`;
     //setGraph(data)
 }
 
-const buscaAmiibo= async()=>{
-    var textoAmiibo=document.getElementById('inputSearch').value;
-    const url = 'https://www.amiiboapi.com/api/amiibo/?character='+textoAmiibo;
+const buscaAmiibo = async () => {
+    var textoAmiibo = document.getElementById('inputSearch').value;
+    const url = `https://www.amiiboapi.com/api/amiibo/?character=${textoAmiibo}`;
+    alert(url);
     const response = await fetch(url);
     console.log(response);
     const data = await response.json();
     console.log(data);
     var amiiboContainer = document.getElementById('container');
     amiiboContainer.innerHTML = "";
-    var cadena="";
+    var cadena = "";
     var i = 0;
     data.amiibo.forEach((amiibo, index) => {
         if (i <= 50) {
@@ -55,7 +57,8 @@ const buscaAmiibo= async()=>{
             i++;
         }
     });
-    amiiboContainer.innerHTML = `<div class="row">`+cadena+`</div>`;
-    
+    amiiboContainer.innerHTML = `<div class="row">` + cadena + `</div>`;
+
 }
+
 getAmiibo();
