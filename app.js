@@ -32,7 +32,6 @@ const getAmiibo = async () => {
 const buscaAmiibo = async () => {
     var textoAmiibo = document.getElementById('inputSearch').value;
     const url = `https://www.amiiboapi.com/api/amiibo/?character=${textoAmiibo}`;
-    alert(url);
     const response = await fetch(url);
     console.log(response);
     const data = await response.json();

@@ -1,9 +1,9 @@
 const setGraph = async() => {
     const url = 'https://www.amiiboapi.com/api/amiibo/?';
     const response = await fetch(url);
-    console.log(response);
+    //console.log(response);
     const data = await response.json();
-    console.log(data);
+    //console.log(data);
     const labels = Object.keys(data.amiibo);
     console.log(labels);
     const convertData = Object.values(data.amiibo).map(item => item.character);
@@ -18,6 +18,7 @@ const setGraph = async() => {
             data: convertData
         }]
     }
+    console.log(dataConfig);
     const config={
         type:'line',
         data: dataConfig,
