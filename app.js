@@ -56,39 +56,6 @@ const buscaAmiibo= async()=>{
         }
     });
     amiiboContainer.innerHTML = `<div class="row">`+cadena+`</div>`;
-    setGraph(data);
+    
 }
-const setGraph = ({ data }) => {
-    const labels = Object.keys(data.iaqi);
-    console.log(labels);
-    const convertData = Object.values(data.iaqi).map(item => item.v);
-    console.log(convertData);
-
-    const dataConfig={
-        labels:labels,
-        datasets:[{
-            labels:'soy un tooltip',
-            backgroundColor:'rgb(255,99,132)',
-            borderColor:'rgb(255,99,132)',
-            data: convertData
-        }]
-    }
-    const config={
-        type:'line',
-        data: dataConfig,
-        options:{
-            scales:{
-                y:{
-                    beginAtZero:true
-                }
-            }
-        }
-    }
-
-    const myChart= new Chart(
-        document.getElementById('myCanvas'),
-        config
-    )
-}
-
 getAmiibo();
