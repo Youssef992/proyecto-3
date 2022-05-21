@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+}
+.jumbotron{
+    background-image: url('assets/img/Amiibo_main.jpg');
+    background-size: cover;
+    height: 300px;
+}
+.jumbotron .lead{
+    padding-top: 50px;
+    text-align: center;
+}
+.card{
+    align-items: center;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+#amiibo-img{
+width: 200px;
+height: 250px;
+}
